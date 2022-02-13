@@ -1,0 +1,34 @@
+-- -------------------------------------------------------------
+-- TablePlus 4.5.2(402)
+--
+-- https://tableplus.com/
+--
+-- Database: kumparan_skill_test
+-- Generation Time: 2022-02-13 23:33:50.4130
+-- -------------------------------------------------------------
+
+
+DROP TABLE IF EXISTS "public"."articles";
+-- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+
+-- Sequence and defined type
+CREATE SEQUENCE IF NOT EXISTS articles_id_seq;
+
+-- Table Definition
+CREATE TABLE "public"."articles" (
+    "id" int4 NOT NULL DEFAULT nextval('articles_id_seq'::regclass),
+    "author" text NOT NULL,
+    "title" text NOT NULL,
+    "body" text NOT NULL,
+    "created_at" timestamp DEFAULT now(),
+    PRIMARY KEY ("id")
+);
+
+INSERT INTO "public"."articles" ("id", "author", "title", "body", "created_at") VALUES
+(1, 'kumparanNEWS', 'Foto: Kesibukan Petugas Membersihkan Arena Olimpiade Beijing Akibat Hujan Salju', 'Sejumlah pekerja sibuk membersihkan salju di beberapa area Olimpiade Musim Dingin Beijing 2022, Minggu (13/2). <br> Lebatnya hujan salju membuat arena Olimpiade tertutup tumpukan salju. Hal tersebut dikhawatirkan dapat mengganggu jalannya pertandingan. <br> Petugas yang diterjunkan tampak membersihkan area menggunakan sekop dan mesin penyedot salju.', '2022-02-13 15:43:35.813509'),
+(2, 'kumparanNEWS', 'Prof Zubairi: Vaksinasi COVID-19 Boleh Bersamaan dengan Imunisasi Anak', 'Pemerintah tengah menggencarkan vaksinasi COVID-19 untuk anak usia 6-11 tahun. Lalu muncul pertanyaan soal keamanan kesehatan anak jika mengikuti vaksinasi COVID-19 dan dibarengi dengan imunisasi. <br> Ketua Satgas Penanganan COVID-19 Ikatan Dokter Indonesia (IDI) Profesor Zubairi Djoerban mengatakan, vaksinasi COVID-19 dan imunisasi aman dilakukan bersamaan. Bahkan jika dilakukan di satu hari yang sama.<br>"Apakah boleh anak yang baru diimunisasi campak dan DPT divaksin COVID-19? Boleh. Bahkan CDC Amerika mengizinkan vaksinasi COVID-19 dilakukan bersamaan dengan vaksin-vaksin lain di hari yang sama," kata Profesor Zubairi dalam cuitannya di twitter pada Minggu (13/2).', '2022-02-13 15:44:01.49082'),
+(3, 'kumparanTRAVEL', 'Harga Tiket Masuk Jatim Park 1, 2, dan 3 Terbaru per Februari 2022', 'Jawa Timur Park atau yang biasa disebut Jatim Park merupakan salah satu tempat wisata pilihan yang ada di Provinsi Jawa Timur. Terletak di Jalan Kartika N0. 2, Kota Batu, Jawa Timur, atau tepatnya 20 kilometer (km) sebelah barat Kota Malang, tempat wisata satu ini menyuguhkan segudang atraksi wisata menarik bagi wisatawan. Saat ini, Jatim Park ini terdiri dari tiga jenis, yaitu Jatim Park I, Jatim Park II, dan Jatim Park III. Ketiganya memiliki ciri khas dan atraksi wisata yang berbeda-beda. Selain ketiga Jatim Park tersebut, Jawa Timur Park Group juga mengelola tempat wisata lain, seperti Batu Night Spectacular (BNS), Eco Green Park, Museum Angkut, Museum Tubuh. Lalu Predator Fun Park, Wisata Bahari Lamongan, Maharani Zoo, hingga World of Wonder di Cikupa, Tangerang.', '2022-02-13 15:44:36.318657'),
+(4, 'kumparanHITS', 'Pandji Pragiwaksono Kena COVID-19 untuk Ketiga Kalinya', 'Pandji Pragiwaksono mengumumkan bahwa dirinya kena COVID-19 untuk ketiga kalinya. Ia menyampaikan hal itu lewat video yang diunggah di akun Instagram miliknya pada Minggu (13/2). <br> “Gue bikin video ini untuk kasih kabar aja karena gue rasa perlu tahu orang-orang, gue sedang karantina di Jakarta karena gue kena COVID lagi untuk ketiga kalinya,” kata Pandji Pragiwaksono. <br> Beberapa waktu lalu, Pandji menyampaikan bahwa dirinya memutuskan untuk merintis karier sebagai seorang komika di New York, Amerika Serikat.<br> Lewat unggahan di Instagram, pria 42 tahun ini membagikan penampilannya saat open mic di beberapa tempat.<br> Pandji mengatakan bahwa dirinya harus balik ke Indonesia. Dia melakukan tes PCR sebagai syarat penerbangan. Dari hasil tes, pemain film Partikelir ini dinyatakan negatif COVID-19. <br>“PCR negatif. Terbang sampai Jakarta, masuk bandara PCR, (hasilnya) negatif,” tutur Pandji.', '2022-02-13 15:45:29.023837'),
+(5, 'kumparanTRAVEL', 'Alasan Pesawat Tidak Terbang Melintasi Wilayah Pegunungan Tibet', 'Tibet dikenal sebagai salah satu tempat yang cukup menantang, tak hanya bagi para pendaki lewat Gunung Everest-nya, tetapi juga pilot pesawat terbang. Ya, dijuluki sebagai atap dunia, kawasan dataran tinggi Tibet ternyata haram hukumnya dilintasi pilot. Kenapa, ya?<br>Dilansir Simple Flying, meski pesawat bisa terbang lebih dari 16 ribu kaki, hal tersebut tetap dilarang, karena daerah ini didominasi dengan pegunungan yang menjulang tinggi. Bahkan, salah satu bandara di Tibet saja, yaitu Lhasa berada di ketinggian hampir 12 ribu kaki.<br> Tak sampai di situ, Tibet juga dianggap memiliki medan yang berat bagi pilot. <br> Sebagai contoh kasus, ketika pesawat kehilangan tekanan kabin, pilot harus menurunkan pesawat ke ketinggian ke 10 ribu kaki untuk memberikan masker oksigen kepada penumpang.  <br> Masker oksigen di pesawat bisa memberikan oksigen bagi masing-masing penumpang setidaknya 10-20 menit. <br> Waktu tersebut adalah waktu yang cukup bagi pesawat untuk turun ke ketinggian 3.048 meter. Namun, hal tersebut tidak akan bisa dilakukan di Tibet, karena dataran tingginya lebih dari 3.048 meter', '2022-02-13 19:34:00.497921'),
+(6, 'kumparanHITS', 'Pemeran Shang-Chi, Simu Liu, Siap Main di Film Live-Action Barbie', 'Sejak beberapa waktu lalu, banyak pecinta film mungkin sudah tahu bahwa aktris Margot Robbie sedang mengerjakan proyek film live-action Barbie. Saat ini, ada dua artis ternama yang kembali diumumkan sebagai pemain di film tersebut.<br>Dua artis itu adalah pemeran Shang-Chi di MCU, Simu Liu, dan America Ferrera. Namun, dilansir Deadline, peran keduanya di film tersebut masih dirahasiakan.<br> Film live-action Barbie sendiri disutradarai oleh Greta Gerwig. Ia juga menjadi penulis naskah, dibantu oleh Noah Baumbach. <br> Selain menjadi produser, Margot Robbie sendiri akan memerankan tokoh Barbie. Ia diduetkan dengan Ryan Gosling yang memerankan tokoh Ken.', '2022-02-13 19:39:20.991448'),
+(10, 'kumparanNews', 'Banyak Negara Minta Warganya Tinggalkan Ukraina, Bagaimana Nasib WNI?', 'Situasi di Ukraina memanas akibat ancaman invasi Rusia. Banyak negara meminta warganya untuk segera meninggalkan Ukraina demi keamanan, lantas bagimana dengan WNI di sana?<br> Kementerian Luar Negeri (Kemlu) RI memastikan KBRI Kiev terus berkoodinasi dengan para WNI, termasuk rencana kontijensi yang dipersiapkan sesuai perkembangan situasi. "Sudah dilangsungkan dialog antara KBRI dengan WNI dan juga sudah ada rencana kontijensi yang akan diberlakukan dengan merujuk perkembangan di lapangan," ujar jubir Kemlu Teuku Faizasyah saat dikonfirmasi, Minggu (13/2).', '2022-02-13 23:14:20.125788');

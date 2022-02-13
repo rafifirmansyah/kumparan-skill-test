@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "95622711-e6c6-4832-a8f5-09a1a7eaf0e1",
+		"name": "Kumparan Skill Test",
+		"description": "To consume a simple news service API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post a new Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"kumparanHITS\",\n    \"title\": \"Pandji Pragiwaksono Kena COVID-19 untuk Ketiga Kalinya\",\n    \"body\": \"Pandji Pragiwaksono mengumumkan bahwa dirinya kena COVID-19 untuk ketiga kalinya. Ia menyampaikan hal itu lewat video yang diunggah di akun Instagram miliknya pada Minggu (13/2). <br> “Gue bikin video ini untuk kasih kabar aja karena gue rasa perlu tahu orang-orang, gue sedang karantina di Jakarta karena gue kena COVID lagi untuk ketiga kalinya,” kata Pandji Pragiwaksono. <br> Beberapa waktu lalu, Pandji menyampaikan bahwa dirinya memutuskan untuk merintis karier sebagai seorang komika di New York, Amerika Serikat.<br> Lewat unggahan di Instagram, pria 42 tahun ini membagikan penampilannya saat open mic di beberapa tempat.<br> Pandji mengatakan bahwa dirinya harus balik ke Indonesia. Dia melakukan tes PCR sebagai syarat penerbangan. Dari hasil tes, pemain film Partikelir ini dinyatakan negatif COVID-19. <br>“PCR negatif. Terbang sampai Jakarta, masuk bandara PCR, (hasilnya) negatif,” tutur Pandji.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/articles",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"articles"
+					]
+				},
+				"description": "## For post a new Article\n\n#### Body :\n\n| **Field** | **Mandatory** |\n| --- | --- |\n| author | yes |\n| title | yes |\n| body | yes |"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"kumparanTRAVEL\",\n    \"title\": \"Harga Tiket Masuk Jatim Park 1, 2, dan 3 Terbaru per Februari 2022\",\n    \"body\": \"Jawa Timur Park atau yang biasa disebut Jatim Park merupakan salah satu tempat wisata pilihan yang ada di Provinsi Jawa Timur. Terletak di Jalan Kartika N0. 2, Kota Batu, Jawa Timur, atau tepatnya 20 kilometer (km) sebelah barat Kota Malang, tempat wisata satu ini menyuguhkan segudang atraksi wisata menarik bagi wisatawan. Saat ini, Jatim Park ini terdiri dari tiga jenis, yaitu Jatim Park I, Jatim Park II, dan Jatim Park III. Ketiganya memiliki ciri khas dan atraksi wisata yang berbeda-beda. Selain ketiga Jatim Park tersebut, Jawa Timur Park Group juga mengelola tempat wisata lain, seperti Batu Night Spectacular (BNS), Eco Green Park, Museum Angkut, Museum Tubuh. Lalu Predator Fun Park, Wisata Bahari Lamongan, Maharani Zoo, hingga World of Wonder di Cikupa, Tangerang.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e-5bz1YQxFms94VSBRXCoQcD5IbXE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 08:02:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Article successfully created.\"\n}"
+				},
+				{
+					"name": "Error Validations",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"\",\n    \"title\": \"\",\n    \"body\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "259"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"103-3iUCSB7BCy7jxRACuioZC9+rurw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Feb 2022 14:35:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"author\": {\n        \"value\": \"\",\n        \"msg\": \"The author is required.\",\n        \"param\": \"author\",\n        \"location\": \"body\"\n    },\n    \"title\": {\n        \"value\": \"\",\n        \"msg\": \"The title is required.\",\n        \"param\": \"title\",\n        \"location\": \"body\"\n    },\n    \"body\": {\n        \"value\": \"\",\n        \"msg\": \"The body is required.\",\n        \"param\": \"body\",\n        \"location\": \"body\"\n    }\n}"
+				},
+				{
+					"name": "Failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"kumparanTRAVEL\",\n    \"title\": \"Harga Tiket Masuk Jatim Park 1, 2, dan 3 Terbaru per Februari 2022\",\n    \"body\": \"Jawa Timur Park atau yang biasa disebut Jatim Park merupakan salah satu tempat wisata pilihan yang ada di Provinsi Jawa Timur. Terletak di Jalan Kartika N0. 2, Kota Batu, Jawa Timur, atau tepatnya 20 kilometer (km) sebelah barat Kota Malang, tempat wisata satu ini menyuguhkan segudang atraksi wisata menarik bagi wisatawan. Saat ini, Jatim Park ini terdiri dari tiga jenis, yaitu Jatim Park I, Jatim Park II, dan Jatim Park III. Ketiganya memiliki ciri khas dan atraksi wisata yang berbeda-beda. Selain ketiga Jatim Park tersebut, Jawa Timur Park Group juga mengelola tempat wisata lain, seperti Batu Night Spectacular (BNS), Eco Green Park, Museum Angkut, Museum Tubuh. Lalu Predator Fun Park, Wisata Bahari Lamongan, Maharani Zoo, hingga World of Wonder di Cikupa, Tangerang.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-gE8V5VdDB+/O90PKSA6pmTz1pIU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 08:00:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Failed\",\n    \"message\": \"Internal Server Error.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get a list of Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/articles?author=kumparanNEWS&query=COVID-19",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"articles"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "kumparanNEWS"
+						},
+						{
+							"key": "query",
+							"value": "COVID-19"
+						}
+					]
+				},
+				"description": "## For get a list of Article with search and filter feature\n\n####   \nBody :\n\n| **Field** | **Mandatory** |\n| --- | --- |\n| author | no (optional) |\n| query | no (optional) |"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/articles?author=kumparanNEWS&query=COVID-19",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							],
+							"query": [
+								{
+									"key": "author",
+									"value": "kumparanNEWS"
+								},
+								{
+									"key": "query",
+									"value": "COVID-19"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "872"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"368-SGEqrpcZiXvwQz9sH4bF7ej8Hx8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 09:39:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"author\": \"kumparanNEWS\",\n            \"title\": \"Prof Zubairi: Vaksinasi COVID-19 Boleh Bersamaan dengan Imunisasi Anak\",\n            \"body\": \"Pemerintah tengah menggencarkan vaksinasi COVID-19 untuk anak usia 6-11 tahun. Lalu muncul pertanyaan soal keamanan kesehatan anak jika mengikuti vaksinasi COVID-19 dan dibarengi dengan imunisasi. <br> Ketua Satgas Penanganan COVID-19 Ikatan Dokter Indonesia (IDI) Profesor Zubairi Djoerban mengatakan, vaksinasi COVID-19 dan imunisasi aman dilakukan bersamaan. Bahkan jika dilakukan di satu hari yang sama.<br>\\\"Apakah boleh anak yang baru diimunisasi campak dan DPT divaksin COVID-19? Boleh. Bahkan CDC Amerika mengizinkan vaksinasi COVID-19 dilakukan bersamaan dengan vaksin-vaksin lain di hari yang sama,\\\" kata Profesor Zubairi dalam cuitannya di twitter pada Minggu (13/2).\",\n            \"created_at\": \"2022-02-13T08:44:01.490Z\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"articles"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"36-gE8V5VdDB+/O90PKSA6pmTz1pIU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 13 Feb 2022 08:02:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"Failed\",\n    \"message\": \"Internal Server Error.\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
