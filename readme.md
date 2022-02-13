@@ -1,5 +1,5 @@
-# ExpressJS PostgreSQL with Migrations and Seeds
-Kumparan Skill Test
+# Kumparan Skill Test 
+Kumparan Skill Test (create a simple news service API)
 
 ## Requirements
 * Node JS v17
